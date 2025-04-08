@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherAPI.WeatherDetailsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="fitXY"
+
+
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_margin="5dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvId"
+                android:text="ID"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCity"
+                android:text="City"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCountry"
+                android:text="Country"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_below="@id/tvId"
+                android:textColor="@color/white"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLatLong"
+                android:text="LatLong"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tvCity"
+                android:textColor="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTemp"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_below="@id/tvCountry"
+                android:textColor="@color/white"
+                android:text="Temperature"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDesc"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tvLatLong"
+                android:textColor="@color/white"
+                android:text="Description"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvHumidity"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_below="@id/tvTemp"
+                android:textColor="@color/white"
+                android:text="Humadity"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvWindSpeed"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tvDesc"
+                android:textColor="@color/white"
+                android:text="Windspeed"
+
+                />
+            />
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvForecaste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvMain"
+        android:text="Forecaste:"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvForecast"
+        android:layout_below="@id/tvForecaste"
+
+        />
+
+</RelativeLayout>
